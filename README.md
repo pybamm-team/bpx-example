@@ -17,7 +17,7 @@ To install the requirements on Linux/Mac OS use the following terminal commands:
 
 1. Clone the repository
 ```bash
-https://github.com/pybamm-team/bpx-example
+git clone https://github.com/pybamm-team/bpx-example
 ```
 2. Change into the `bpx-example` directory 
 ```bash
@@ -41,7 +41,7 @@ To install the requirements on Windows use the following commands:
 
 1. Clone the repository
 ```bash
-https://github.com/pybamm-team/bpx-example
+git clone https://github.com/pybamm-team/bpx-example
 ```
 2. Change into the `bpx-example` directory 
 ```bash
