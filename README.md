@@ -1,6 +1,4 @@
 # 🔋 PyBaMM BPX example
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/pybamm-team/bpx-example/blob/main/)
-
 An example repository showing how to import parameters defined using the [BPX standard](https://github.com/pybamm-team/BPX). To try out the examples locally on your own machine follow the installation instructions below.
 
 
