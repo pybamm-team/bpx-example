@@ -1,6 +1,15 @@
 # 🔋 PyBaMM BPX example
 An example repository showing how to import parameters defined using the [BPX standard](https://github.com/pybamm-team/BPX). To try out the examples locally on your own machine follow the installation instructions below.
 
+The simplest way to use BPX parameters in PyBaMM is to run a 1C constant-current discharge with a model of your choice with all the default settings and load the BPX JSON file:
+```python3
+import pybamm
+model = pybamm.lithium_ion.DFN()  # Doyle-Fuller-Newman model
+parameter_values = pybamm.ParameterValues.create_from_bpx("example-params.json")
+sim = pybamm.Simulation(model, parameter_values=parameter_values)
+sim.solve([0, 3600])  # solve for 1 hour
+sim.plot()
+```
 
 ## 💻 About PyBaMM
 The example simulations use the package [PyBaMM](www.pybamm.org) (Python Battery Mathematical Modelling). PyBaMM solves physics-based electrochemical DAE models by using state-of-the-art automatic differentiation and numerical solvers. The Doyle-Fuller-Newman model can be solved in under 0.1 seconds, while the reduced-order Single Particle Model and Single Particle Model with electrolyte can be solved in just a few milliseconds. Additional physics can easily be included such as thermal effects, fast particle diffusion, 3D effects, and more. All models are implemented in a flexible manner, and a wide range of models and parameter sets (NCA, NMC, LiCoO2, ...) are available. There is also functionality to simulate any set of experimental instructions, such as CCCV or GITT, or specify drive cycles.
