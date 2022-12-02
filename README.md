@@ -15,7 +15,7 @@ sim.plot()
 The example simulations use the package [PyBaMM](www.pybamm.org) (Python Battery Mathematical Modelling). PyBaMM solves physics-based electrochemical DAE models by using state-of-the-art automatic differentiation and numerical solvers. The Doyle-Fuller-Newman model can be solved in under 0.1 seconds, while the reduced-order Single Particle Model and Single Particle Model with electrolyte can be solved in just a few milliseconds. Additional physics can easily be included such as thermal effects, fast particle diffusion, 3D effects, and more. All models are implemented in a flexible manner, and a wide range of models and parameter sets (NCA, NMC, LiCoO2, ...) are available. There is also functionality to simulate any set of experimental instructions, such as CCCV or GITT, or specify drive cycles.
 
 ## 🚀 Installation
-In order to run the examples in this repository you will need to install [PyBaMM](https://github.com/pybamm-team/PyBaMM) and [BPX](https://github.com/pybamm-team/BPX). Note that at present the functionality to load in BPX parameters is not included in the latest release of PyBaMM, so for now we must install from a specific branch as specified in `requirements.txt`.
+In order to run the examples in this repository you will need to install [PyBaMM](https://github.com/pybamm-team/PyBaMM) and [BPX](https://github.com/pybamm-team/BPX). Note that at present the functionality to load in BPX parameters is not included in the latest release of PyBaMM, so for now we must install from a specific branch as specified in `requirements.txt`. The functionality to load in BPX parameters will be available in PyBaMM 21.12 (released at the end of December 2021).
 
 We recommend installing within a [virtual environment](https://docs.python.org/3/tutorial/venv.html) in order to not alter any python distribution files on your machine.
 
@@ -46,6 +46,14 @@ pip install -r requirements.txt
 ```
 
 ### Windows
+Note: When installing PyBaMM from a specific branch in Windows you may encounter the error `unable to create file "...": Filename too long. fatal: unable to checkout working tree`. To fix this follow these steps:
+
+ 1. [Configure Windows to accept long file paths](https://thegeekpage.com/make-windows-11-accept-file-paths-over-260-characters/). 
+ 2. Configure git client to accept long paths: `git config --global core.longpaths true`
+
+Once PyBaMM 21.12 is released we will be able to install in the usual way, rather than from a specific git branch, so this error will be avoided altogether.
+
+
 To install the requirements on Windows use the following commands:
 
 1. Clone the repository
@@ -78,3 +86,7 @@ As an alternative, you can set up [Windows Subsystem for Linux](https://docs.mic
 **Problem:** `ModuleNotFoundError: No module named 'wheel'`.
 
 **Solution:** Use the command `pip install wheel` before installing the requirements.
+
+**Problem:** error: unable to create file "...": Filename too long. fatal: unable to checkout working tree
+
+**Solution:** 1. [Configure Windows to accept long file paths](https://thegeekpage.com/make-windows-11-accept-file-paths-over-260-characters/). 2. Configure git client to accept long paths: `git config --global core.longpaths true`
