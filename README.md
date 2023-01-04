@@ -15,7 +15,7 @@ sim.plot()
 The example simulations use the package [PyBaMM](www.pybamm.org) (Python Battery Mathematical Modelling). PyBaMM solves physics-based electrochemical DAE models by using state-of-the-art automatic differentiation and numerical solvers. The Doyle-Fuller-Newman model can be solved in under 0.1 seconds, while the reduced-order Single Particle Model and Single Particle Model with electrolyte can be solved in just a few milliseconds. Additional physics can easily be included such as thermal effects, fast particle diffusion, 3D effects, and more. All models are implemented in a flexible manner, and a wide range of models and parameter sets (NCA, NMC, LiCoO2, ...) are available. There is also functionality to simulate any set of experimental instructions, such as CCCV or GITT, or specify drive cycles.
 
 ## 🚀 Installation
-In order to run the examples in this repository you will need to install [PyBaMM](https://github.com/pybamm-team/PyBaMM) (version 21.12 or newer) and [BPX](https://github.com/pybamm-team/BPX). 
+In order to run the examples in this repository you will need to install [PyBaMM](https://github.com/pybamm-team/PyBaMM) (version 22.12 or newer) and [BPX](https://github.com/pybamm-team/BPX). 
 
 We recommend installing within a [virtual environment](https://docs.python.org/3/tutorial/venv.html) in order to not alter any python distribution files on your machine.
 
