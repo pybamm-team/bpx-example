@@ -1,3 +1,3 @@
 wheel
-git+https://github.com/pybamm-team/BPX.git
-git+https://github.com/pybamm-team/pybamm.git@i2376-bpx#egg=pybamm
+bpx
+pybamm>=21.12
