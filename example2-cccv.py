@@ -27,7 +27,7 @@ experiment = pybamm.Experiment(
     * 2
 )
 
-# create simulation 
+# create simulation
 sim = pybamm.Simulation(model, parameter_values=parameter_values, experiment=experiment)
 
 # solve
